@@ -1,0 +1,12 @@
+.color-verde {
+    color: green;
+}
+
+.titulo {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.boder {
+    border: solid 2px black;
+}

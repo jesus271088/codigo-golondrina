@@ -1,0 +1,14 @@
+<hr>
+<div [ngClass]="'color-verde'"> Classe sola</div>
+<hr>
+<div [ngClass]="['color-verde', 'titulo']">Dos Clases en arreglo</div>
+<hr>
+<div [ngClass]="{'color-verde': false, 'titulo': true, 'boder': true}">Tres Clases con condicional</div>
+<hr>
+<div [ngClass]="{'color-verde titulo boder' : true}"> Clase activada por Tuberia </div>
+<hr>
+<div *ngFor='let dato of cicloDatos'>
+    <li [ngClass]='{"titulo": DatosPermitidos | checarArrayPipe:dato.id}'>
+        {{dato.name}}
+    </li>
+</div>

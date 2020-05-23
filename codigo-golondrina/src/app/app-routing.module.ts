@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NgclassComponent } from './directiva/ngclass/ngclass.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: '/directivas/ngclass', pathMatch: 'full' },
+  { path: 'directivas/ngclass', component: NgclassComponent },
+];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const AppRoutingModule: ModuleWithProviders = RouterModule.forRoot(routes);
+
